@@ -30,5 +30,3 @@ twilio plugins:install @twilio-labs/plugin-flex
 ## Development
 
 Run `twilio flex:plugins --help` to see all the commands we currently support. For further details on Flex Plugins refer to our documentation on the [Twilio Docs](https://www.twilio.com/docs/flex/developer/plugins/cli) page.
-
->>>>>>> master
