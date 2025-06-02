@@ -1,32 +1,66 @@
-# flex-inbound-call-alert-plugin
-Twilio Flex Plugin to play a sound alert for inbound voice calls, helping agents respond quickly to incoming calls.
+# 📞 Flex Inbound Call Alert Plugin
+
+A custom Twilio Flex plugin that plays a sound alert for inbound voice calls. This helps agents get notified audibly when new calls arrive, reducing the risk of missed customer interactions.
 
 
-Twilio Flex Plugins allow you to customize the appearance and behavior of [Twilio Flex](https://www.twilio.com/flex). If you want to learn more about the capabilities and how to use the API, check out our [Flex documentation](https://www.twilio.com/docs/flex).
+## 🎯 Objective
 
-## Setup
+This plugin notifies Flex agents about incoming **inbound voice calls** using a browser-based audio alert. It plays a looping sound until the agent accepts, rejects, or the reservation times out.
 
-Make sure you have [Node.js](https://nodejs.org) as well as [`npm`](https://npmjs.com). We support Node >= 10.12 (and recommend the _even_ versions of Node). Afterwards, install the dependencies by running `npm install`:
+---
+
+## 🧰 Product
+
+- **Twilio Flex**
+- **Flex Plugin CLI**
+
+---
+
+## 🔐 User Permissions
+
+Anyone with access to deploy plugins using the Twilio CLI can use this plugin:
+
+- Flex Admins  
+- Developers with proper permissions  
+
+You’ll need access to:
+- Your Twilio Flex project  
+- The ability to deploy and release plugins via the CLI
+
+---
+
+## 🛠️ Setup Instructions
+
+### 1. Clone the Repository
 
 ```bash
-cd 
+git clone https://github.com/your-username/flex-inbound-call-alert-plugin.git
+cd flex-inbound-call-alert-plugin
+```
 
-# If you use npm
+###2. Install Dependencies
+
+```bash
 npm install
 ```
-
-Next, please install the [Twilio CLI](https://www.twilio.com/docs/twilio-cli/quickstart) by running:
-
-```bash
-brew tap twilio/brew && brew install twilio
-```
-
-Finally, install the [Flex Plugin extension](https://github.com/twilio-labs/plugin-flex/tree/v1-beta) for the Twilio CLI:
+3. Start the Plugin Locally
 
 ```bash
-twilio plugins:install @twilio-labs/plugin-flex
+twilio flex:plugins:start
 ```
 
-## Development
+This runs the plugin in your browser for testing.
 
-Run `twilio flex:plugins --help` to see all the commands we currently support. For further details on Flex Plugins refer to our documentation on the [Twilio Docs](https://www.twilio.com/docs/flex/developer/plugins/cli) page.
+4. Deploy the Plugin
+   
+Once you're happy with your changes:
+
+```bash
+twilio flex:plugins:deploy --major --changelog "Initial deploy of inbound call alert plugin"
+```
+
+5. Release the Plugin
+
+```bash
+twilio flex:plugins:release --plugin flex-inbound-call-alert-plugin@1.0.0 --name "Inbound Call Alert"
+```
