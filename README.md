@@ -38,12 +38,12 @@ git clone https://github.com/your-username/flex-inbound-call-alert-plugin.git
 cd flex-inbound-call-alert-plugin
 ```
 
-###2. Install Dependencies
+### 2. Install Dependencies
 
 ```bash
 npm install
 ```
-3. Start the Plugin Locally
+### 3. Start the Plugin Locally
 
 ```bash
 twilio flex:plugins:start
@@ -51,7 +51,7 @@ twilio flex:plugins:start
 
 This runs the plugin in your browser for testing.
 
-4. Deploy the Plugin
+### 4. Deploy the Plugin
    
 Once you're happy with your changes:
 
@@ -59,7 +59,7 @@ Once you're happy with your changes:
 twilio flex:plugins:deploy --major --changelog "Initial deploy of inbound call alert plugin"
 ```
 
-5. Release the Plugin
+### 5. Release the Plugin
 
 ```bash
 twilio flex:plugins:release --plugin flex-inbound-call-alert-plugin@1.0.0 --name "Inbound Call Alert"
