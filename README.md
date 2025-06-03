@@ -16,19 +16,6 @@ This plugin notifies Flex agents about incoming **inbound voice calls** using a 
 
 ---
 
-## 🔐 User Permissions
-
-Anyone with access to deploy plugins using the Twilio CLI can use this plugin:
-
-- Flex Admins  
-- Developers with proper permissions  
-
-You’ll need access to:
-- Your Twilio Flex project  
-- The ability to deploy and release plugins via the CLI
-
----
-
 ## 🛠️ Setup Instructions
 
 ### 1. Clone the Repository
